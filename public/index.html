@@ -1,0 +1,60 @@
+<!-- //public/index.html -->
+
+<!DOCTYPE html>  
+<html>
+
+<head>  
+    <title>Twitter Demo</title>
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>  
+    <div id="nav">
+        <h3 id ="trigger"><a>about</a></h3>
+        <div id="links">
+            <h3>this twitter sentiment analysis app<br>was created by <a href="http://www.adriannatan.com">Adrianna Tan</a>, using<br>node.js, socket.io, and plotly.js</h3>
+        </div>
+    </div> 
+    <div id="choose-search" class="before-search">
+        <div id="vert-wrap">
+            <h1>How does Twitter feel about</h1>
+            <input id="typeform" type="text" autofocus="autofocus" data-input-keyword >
+            <button id="submit-keyword" disabled data-submit-keyword type="submit"></button>
+            <h1>?</h1>
+        </div>
+    </div>
+
+<div id="show-results" class="before-result">
+    <div id="name">
+        <div id="name-wrap">
+            <h2 id="name-input">Keyword</h2>
+            <h3 id="num-tweet"># of Tweets: 0</h3>
+            <h3 id="sent-score">
+                Sentiment: +0.00
+            </h3>
+        </div>
+    </div>
+
+    <div id="dataviz">
+        <div id = "plotly"></div>
+        <div id = "average">averagetest</div>
+    </div>
+
+    <div id="text-populate">
+    <!-- Tweet e.g. GOP Coward Sanford Blames Trump For Left’s Aggression, Attacks https://t.co/Tdr96YFOMm https://t.co/tH09GODbB -->
+    </div>
+</div>
+</body>
+
+<script src="/js/gauge.js"></script>
+<script src="/socket.io/socket.io.js"></script>  
+<script src="/js/socket.js"></script>
+<script src="/js/main.js"></script>
+</html>  
